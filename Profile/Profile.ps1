@@ -56,6 +56,10 @@ Function Global:Prompt {
 }
 #EndRegion ---- Set Custom Prompt ----
 
+#Region ---- Import Modules ----
+Import-Module Terminal-Icons
+#EndRegion ---- Import Modules ----
+
 #Region ---- Configure PSDrives ----
 $LibPath = (Split-Path $PSScriptRoot -Parent)
 New-PSDrive -Name LibPath -PSProvider FileSystem -Root $LibPath | Out-Null
