@@ -89,9 +89,7 @@ Function Sam.AD-NewSecurityGroup {
             GroupScope     = 'Global'
             Path           = "OU=Generic-Security Groups,OU=ORG,DC=invotec-uk,DC=com"
             Credential     = $Credentials
-
         }
-
         Try {
             New-ADGroup @GroupParams
         }
