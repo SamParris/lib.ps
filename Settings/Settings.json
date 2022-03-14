@@ -1,0 +1,74 @@
+//   Settings.JSON file for PowerShell and VSCode
+//   Author: Sam Parris
+
+{
+    //   VSCode Specific Settings
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": "250",
+    "terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorWidth": 2,
+    "editor.renderControlCharacters": true,
+    "files.defaultLanguage": "powershell",
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+	"powershell.integratedConsole.showOnStartup": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+
+    //   PowerShell Specific Settings
+    "[powershell]": {
+        "editor.renderWhitespace": "none",
+        "editor.renderControlCharacters": true,
+        "files.trimTrailingWhitespace": true,
+        "files.encoding": "utf8bom",
+        "files.autoGuessEncoding": true,
+        "editor.tabCompletion": "on",
+        "editor.codeLens": false,
+        "editor.semanticHighlighting.enabled": true
+    },
+
+    //   Editor Token Colour Customisations
+    "editor.tokenColorCustomizations": {
+        "variables": "#86c4ec",
+        "functions": "#ec7c7c",
+        "types": "#696969",
+        "keywords": "#b98fcc",
+        "strings": "#caa56d",
+        "numbers": "#696969",
+
+        //   TextMate Colour Rules
+        "textMateRules": [
+            {
+                "scope": "variable.other.property",
+                "settings": {
+                    "foreground": "#eeee99"
+                }
+            },
+            {
+                "scope": "entity.name.type",
+                "settings": {
+                    "foreground": "#a1f8b0"
+                }
+            },
+            {
+                "scope": "comment",
+                "settings": {
+                    "foreground": "#838181",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "string.quoted.double",
+                "settings": {
+                    "foreground": "#caa56d"
+                }
+            },
+            {
+                "scope": "variable.parameter",
+                "settings": {
+                    "foreground": "#5FB3B3"
+                }
+            }
+        ]
+    }
+}
