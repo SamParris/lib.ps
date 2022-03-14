@@ -75,4 +75,33 @@ ForEach-Object {
 }
 #EndRegion ---- Import Custom Function Libraries ----
 
+#Region ---- Set PSReadLine Options ----
+$PSReadLineOptions = @{
+    Colors              = @{
+        Default          = "#FFFFFF"
+        Comment          = "#696969"
+        Keyword          = "#27e797"
+        String           = "#caa56d"
+        Operator         = "#FFFFFF"
+        Variable         = "#86c4ec"
+        Command          = "#ec7c7c"
+        Parameter        = "#5FB3B3"
+        Type             = "#696969"
+        Number           = "#696969"
+        Member           = "#eeee99"
+        InlinePrediction = "#D3D3D3"
+    }
+    PredictionSource    = "History"
+    HistoryNoDuplicates = $true
+    ShowToolTips        = $true
+}
+
+Set-PSReadLineOption @PSReadLineOptions
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+#EndRegion ---- Set PSReadLine Options ----
+
+#Region ---- Set Working Directory ----
+Set-Location LibPath:
+#EndRegion ---- Set Working Directory ----
+
 #EndRegion Profile.ps1
