@@ -1,0 +1,12 @@
+## - Git Ignore File
+
+# - Windows Image Cache Files
+Thumbs.db
+ehtumbs.db
+
+# - Windows Installer Files
+*.cab
+*.msi
+
+# - Windows Shortcuts
+*.lnk
